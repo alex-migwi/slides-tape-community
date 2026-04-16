@@ -19,7 +19,7 @@ This repository contains a collection of web demos that showcase various feature
    ```bash
    npx serve .
    ```
-3. Open your browser and go to `http://localhost:3000` to view the demo.
+3. Open your browser and go to `http://localhost:3000` to view the web app used in the web automation demo.
 
 4. Run the web demos markdown file in the demos folder using: `slides-tape serve demos/web-demos.md --port 3001`
 > We specify `--port 3001` because `npx serve` is using port 3000 and we have the flexibility to specify a port for slides-tape  presentation decks. 
