@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar">
+      <h2>Acme Inc</h2>
+
+      <ul>
+        <li class="active"><a href="dashboard.html">Dashboard</a></li>
+        <li><a id="products-link" href="products.html">Products</a></li>
+      </ul>
+
+      <button id="logout-button" class="logout">Logout</button>
+    </aside>
+
+    <main class="main">
+
+      <header class="header">
+        <h1>Dashboard</h1>
+        <div>
+          <button id="theme-toggle">🌗</button>
+          <button id="new-item">+ New Item</button>
+        </div>
+      </header>
+
+      <section class="stats">
+        <div class="card">Revenue<br><strong>$12,400</strong></div>
+        <div class="card">Users<br><strong>1,240</strong></div>
+        <div class="card">Orders<br><strong>320</strong></div>
+      </section>
+
+      <section class="card">
+        <h3>Items</h3>
+
+        <div id="item-form" class="hidden">
+          <input id="item-name" placeholder="Item Name" />
+          <button id="save">Save</button>
+        </div>
+
+        <ul id="items"></ul>
+      </section>
+
+    </main>
+  </div>
+
+  <div id="spinner" class="spinner hidden"></div>
+  <div id="toast" class="toast">Item created!</div>
+
+  <script src="app.js"></script>
+</body>
+</html>

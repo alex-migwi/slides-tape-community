@@ -1,0 +1,3 @@
+{"e":"typing","cmd":"npm install @xterm/headless","t":0}
+{"e":"cmd_start","cmd":"mocked","t":10}
+{"e":"output","data":"added 118 packages in 48s","t":50}

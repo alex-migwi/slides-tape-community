@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Acme Inc - Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="auth-page">
+
+  <div class="auth-layout">
+
+    <!-- Left Branding Panel -->
+    <section class="auth-brand">
+      <h1>slides-tape</h1>
+      <p>Automate your demo workflows. Ship faster. Demo better.</p>
+
+      <div class="auth-bullets">
+        <div>⚡ Fast automation-ready UI</div>
+        <div>🎥 Demo-friendly workflows</div>
+        <div>🧪 Deterministic execution</div>
+      </div>
+    </section>
+
+    <!-- Right Login Panel -->
+    <section class="auth-card">
+
+      <h2>Welcome back</h2>
+      <p class="muted">Sign in to continue</p>
+
+      <button id="theme-toggle" class="ghost">🌗 Toggle Theme</button>
+
+      <div id="spinner" class="spinner hidden"></div>
+
+      <form id="login-form">
+        <label>Email</label>
+        <input id="email" placeholder="demo@company.com" />
+
+        <label>Password</label>
+        <input id="password" type="password" placeholder="password123" />
+
+        <button id="login-button" type="submit">
+          Sign in
+        </button>
+      </form>
+
+      <p id="error" class="error hidden">
+        Invalid credentials
+      </p>
+
+      <div class="hint">
+        Use demo@company.com / password123
+      </div>
+
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
