@@ -6,6 +6,8 @@
 [![node](https://img.shields.io/node/v/slides-tape?style=flat-square)](https://nodejs.org)
 [![license](https://img.shields.io/npm/l/slides-tape?style=flat-square)](LICENSE)
 
+> OpenSource code will be available soon. We need to take care of some stuff first.
+
 ---
 
 ## ✨ What is slides-tape?
@@ -20,6 +22,7 @@
 ---
 
 ### 🌐 [Official Documentation Site](https://slides-tape.chanansystems.co.ke)
+
 For the full guide on directives, CLI options, and advanced rendering, visit the official site.
 
 ---
@@ -90,47 +93,50 @@ echo "Done!"
 ## 🛠️ CLI Reference
 
 ### `serve <file.md>`
+
 Start a live interactive presentation viewer.
 
 ```bash
 slides-tape serve talk.md --port 8080 -d 6
 ```
 
-| Option | Description | Default |
-|---|---|---|
-| `--port <n>` | HTTP port | `3000` |
-| `-d, --autoplay-duration <s|ms>` | Wait time per slide in seconds | `4` |
-| `--no-open` | Don't open browser | — |
+| Option                      | Description        | Default                        |
+| --------------------------- | ------------------ | ------------------------------ | --- |
+| `--port <n>`                | HTTP port          | `3000`                         |
+| `-d, --autoplay-duration <s | ms>`               | Wait time per slide in seconds | `4` |
+| `--no-open`                 | Don't open browser | —                              |
 
 ---
 
 ### `run <script.sh>`
+
 Record a shell script to MP4 using the native canvas renderer.
 
 ```bash
 slides-tape run demo.sh -o demo.mp4 --speed 1.5 --font-size 16
 ```
 
-| Option | Description | Default |
-|---|---|---|
-| `-o, --output <path>` | Output file | `<script>.mp4` |
-| `-r, --resolution <WxH>` | Video resolution | `1920x1080` |
-| `-f, --fps <fps>` | Framerate | `30` |
-| `--format <fmt>` | `mp4` \| `webm` | `mp4` |
-| `--speed <n>` | Playback speed multiplier | `1` |
-| `--cols / --rows <n>` | Terminal dimensions | `120x30` |
-| `--ps1 <string>` | Shell prompt | `"$ "` |
-| `--font-size <px>` | Font size (pixels) | `14` |
-| `--font-family <name>` | Font family name | `"JetBrains Mono"` |
-| `--load-events <path>` | Re-render from a saved `.tre` log | — |
-| `--skip-idle <ms>` | Cap idle gaps longer than ms | off |
-| `--highlight-cmds` | Flash command starts | off |
-| `--no-save-events` | Disable auto-save of `.tre` | — |
-| `--keep-frames` | Keep raw PNG frames | — |
+| Option                   | Description                       | Default            |
+| ------------------------ | --------------------------------- | ------------------ |
+| `-o, --output <path>`    | Output file                       | `<script>.mp4`     |
+| `-r, --resolution <WxH>` | Video resolution                  | `1920x1080`        |
+| `-f, --fps <fps>`        | Framerate                         | `30`               |
+| `--format <fmt>`         | `mp4` \| `webm`                   | `mp4`              |
+| `--speed <n>`            | Playback speed multiplier         | `1`                |
+| `--cols / --rows <n>`    | Terminal dimensions               | `120x30`           |
+| `--ps1 <string>`         | Shell prompt                      | `"$ "`             |
+| `--font-size <px>`       | Font size (pixels)                | `14`               |
+| `--font-family <name>`   | Font family name                  | `"JetBrains Mono"` |
+| `--load-events <path>`   | Re-render from a saved `.tre` log | —                  |
+| `--skip-idle <ms>`       | Cap idle gaps longer than ms      | off                |
+| `--highlight-cmds`       | Flash command starts              | off                |
+| `--no-save-events`       | Disable auto-save of `.tre`       | —                  |
+| `--keep-frames`          | Keep raw PNG frames               | —                  |
 
 ---
 
 ### `web <demo.md>`
+
 Execute all `web run` blocks from a Markdown file.
 
 ```bash
@@ -141,15 +147,16 @@ slides-tape web demo.md
 slides-tape web demo.md -o ui-tour.mp4 --resolution 1280x720
 ```
 
-| Option | Description | Default |
-|---|---|---|
-| `-o, --output <path>` | Target MP4 path | — |
+| Option                   | Description      | Default     |
+| ------------------------ | ---------------- | ----------- |
+| `-o, --output <path>`    | Target MP4 path  | —           |
 | `-r, --resolution <WxH>` | Video resolution | `1920x1080` |
-| `-f, --fps <fps>` | Framerate | `30` |
+| `-f, --fps <fps>`        | Framerate        | `30`        |
 
 ---
 
 ### `export <file.md>`
+
 Export your entire slide deck to MP4/WebM.
 
 ```bash
@@ -157,18 +164,18 @@ Export your entire slide deck to MP4/WebM.
 slides-tape export talk.md -o talk.mp4 --transition-type zoom -t 800
 ```
 
-| Option | Description | Default |
-|---|---|---|
-| `-o, --output <path>` | Output file | `<md>.mp4` |
-| `-r, --resolution <WxH>` | Video resolution | `1920x1080` |
-| `-d, --duration <s|ms>` | Wait time per slide | `4` |
-| `-t, --transition <ms>` | Crossfade duration | `500` |
-| `--transition-type <n>` | fade \| zoom \| wiperight... | `fade` |
-| `-f, --fps <fps>` | Framerate | `30` |
-| `--format <fmt>` | `mp4` \| `webm` | `mp4` |
-| `--no-run` | Skip all `run` blocks | — |
-| `--screenshot` | Save PNG of every slide | — |
-| `--keep-frames` | Keep raw PNG frames | — |
+| Option                   | Description                  | Default             |
+| ------------------------ | ---------------------------- | ------------------- | --- |
+| `-o, --output <path>`    | Output file                  | `<md>.mp4`          |
+| `-r, --resolution <WxH>` | Video resolution             | `1920x1080`         |
+| `-d, --duration <s       | ms>`                         | Wait time per slide | `4` |
+| `-t, --transition <ms>`  | Crossfade duration           | `500`               |
+| `--transition-type <n>`  | fade \| zoom \| wiperight... | `fade`              |
+| `-f, --fps <fps>`        | Framerate                    | `30`                |
+| `--format <fmt>`         | `mp4` \| `webm`              | `mp4`               |
+| `--no-run`               | Skip all `run` blocks        | —                   |
+| `--screenshot`           | Save PNG of every slide      | —                   |
+| `--keep-frames`          | Keep raw PNG frames          | —                   |
 
 ---
 
@@ -184,6 +191,7 @@ Inside `web run` blocks (in slides or standalone `.md` files):
 ```
 
 **Selector examples:**
+
 ```bash
 # @click button[type="submit"]
 # @click table > tbody > tr:nth-child(1) > td:last-child > button
@@ -212,11 +220,13 @@ See the [Terminal Event Log Guide](https://slides-tape.chanansystems.co.ke/docs.
 ## 🎭 Presenter Features
 
 **Speaker Notes** (visible only in presenter view, not exported):
+
 ```markdown
 > Note: Emphasize that this runs at 10k req/s per node!
 ```
 
 **Custom Slide Duration** (override global autoplay for one slide):
+
 ```markdown
 <!-- duration: 12s -->
 ```
